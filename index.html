@@ -195,7 +195,7 @@
                 >
             </div>
 
-            <button type="submit">Create account</button>
+            <button type="submit" id="create-account" disabled>Create account</button>
         </form>
 
         <!-- Collapsible logs container -->
@@ -238,8 +238,8 @@
                 console.log("EVP Presentation Token:", e.presentationToken);
                 
                 // OPTIONAL: Open the log accordion so they see it worked!
-                const details = document.getElementById('log-accordion');
-                if (details) details.open = true;
+                const button = document.getElementById('create-account');
+                if (button) button.disabled = false;
             });
 
             input.addEventListener('focus', () => {
